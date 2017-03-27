@@ -65,14 +65,14 @@ class User implements UserInterface, Serializable {
     /**
      * @var string
      *
-     * @ORM\Column(name="telephone", type="string", length=100)
+     * @ORM\Column(name="telephone", type="integer", length=10)
      */
     private $telephone;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="codepostale", type="string", length=5)
+     * @ORM\Column(name="codepostale", type="integer", length=5)
      */
     private $codepostale;
 

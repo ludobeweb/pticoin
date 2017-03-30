@@ -2,12 +2,12 @@
 
     .table-title {
         font-family: $main-font;
-        background-color: #ff9000;
+        background-color: #008B8B;
         color: #fff;
         width: 80%;
         margin: auto;
         padding: 20px;
-        outline: solid 2px #ffca61;
+        outline: solid 2px #008B8B;
         margin-bottom: 10px;
     }
 
@@ -32,11 +32,11 @@
         }
 
         tbody {
-            background-color: #ffec85;
+            background-color: #f56b2a;
 
             .left-col{
                 width: 160px;
-                background-color: #ffca61;
+                background-color: #f56b2a;
             }
 
             .right-col{
@@ -45,7 +45,7 @@
             }
 
             tr:not(.spacer) {
-                outline: solid 2px #ffca61;
+                outline: solid 2px #f56b2a;
             }
 
 

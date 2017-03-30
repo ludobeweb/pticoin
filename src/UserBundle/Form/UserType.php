@@ -28,6 +28,7 @@ class UserType extends AbstractType
                 ->add('password', PasswordType::class)
                 ->add('ville')
                 ->add('Envoyer', SubmitType::class);
+                
     }
     
     /**

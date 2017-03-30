@@ -10,16 +10,16 @@ h1 {
   text-align: center; }
 
 h2 {
-  background-color: #ff9000;
+  background-color: #f56b2a;
   color: white;
   width: 295px; }
 
 .btn-default {
-  background-color: #FEA226;
+  background-color: white;
   margin: 7px; }
 
 th {
-  background-color: #fea226; }
+  background-color: #f56b2a; }
 
 #adminbundle_annonce, #adminbundle_demande, #userbundle_user {
   background-color: #f2ffdf;
@@ -63,14 +63,14 @@ textarea {
   text-align: right; }
 
 .navbar {
-  background-color: #ffca61; }
+  background-color: #f56b2a; }
   .navbar .nav > li > a {
     color: #000; }
     .navbar .nav > li > a:hover {
       background-color: #FFF;
       color: #000; }
   .navbar .navbar-brand {
-    color: #000; }
+    color: blue; }
 
 .table {
   margin: 0 auto;
@@ -79,16 +79,16 @@ textarea {
     background-color: #ddd; }
 
 .profil-titre {
-  background-color: #fea226; }
+  background-color: #f56b2a; }
 
 .table-responsive .table-title {
   font-family: "Hammersmith+One", sans-serif;
-  background-color: #ff9000;
+  background-color: #008B8B;
   color: #fff;
   width: 80%;
   margin: auto;
   padding: 20px;
-  outline: solid 2px #ffca61;
+  outline: solid 2px #008B8B;
   margin-bottom: 10px; }
 .table-responsive .table-visiteur {
   width: 80%;
@@ -100,14 +100,14 @@ textarea {
   .table-responsive .table-visiteur h3 {
     font-family: "Hammersmith+One", sans-serif; }
   .table-responsive .table-visiteur tbody {
-    background-color: #ffec85; }
+    background-color: #f56b2a; }
     .table-responsive .table-visiteur tbody .left-col {
       width: 160px;
-      background-color: #ffca61; }
+      background-color: #f56b2a; }
     .table-responsive .table-visiteur tbody .right-col {
       text-align: right; }
     .table-responsive .table-visiteur tbody tr:not(.spacer) {
-      outline: solid 2px #ffca61; }
+      outline: solid 2px #f56b2a; }
   .table-responsive .table-visiteur .spacer {
     height: 10px; }
 

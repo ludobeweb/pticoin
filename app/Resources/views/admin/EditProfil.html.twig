@@ -1,7 +1,9 @@
 {# empty Twig template #}
-
+{% block stylesheets %}
+            <link href="{{ asset('../vendor/twbs/bootstrap/dist/css/bootstrap.css') }}" rel="stylesheet" />
+            <link href="{{ asset('/css/style.css') }}" rel="stylesheet" />{% endblock %}
 <div>
     {{form_start(edit_form)}}
                 {{form_end(edit_form)}}
             </div>
-
+                <button><a href="{{ path('profil') }}">Retour à mon profil</a></button>

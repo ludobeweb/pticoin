@@ -122,6 +122,7 @@ class ClientController extends Controller {
             ;
 
             $this->get('mailer')->send($message);
+            echo("lala");
         }
 
         return $this->render('ClientBundle:Default:mail.html.twig', array(

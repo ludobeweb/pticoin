@@ -26,7 +26,7 @@
                 <li><a href="{{ path('new') }}">Déposer une annonce</a></li>
                 <li><a href="{{ path('newdemande') }}">Déposer une demande</a></li>
                   {%if app.user.username is defined%}
-                <li><a href="{{ path('logout') }}">Se déconnecter</a></li>
+                <li><a onclick="myFonction()" href="{{ path('logout') }}">Se déconnecter</a></li>
                 {%else%}
                 <li><a href="{{ path('login') }}">Se connecter</a></li>
                 <li><a href="{{ path('inscription') }}">S'inscrire</a></li>

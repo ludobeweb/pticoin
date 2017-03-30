@@ -18,7 +18,7 @@
                         <div>
                             <ul class="nav navbar-nav">
                                 <li><a href="{{ path('profil') }}">Mon profil</a></li>
-                                <li><a href="{{ path('logout') }}">Se déconnecter</a></li>
+                                <li><a onclick="myFunction();" href="{{ path('logout') }}">Se déconnecter</a></li>
                             </ul>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
@@ -62,6 +62,9 @@
             {% block footer %}
                 <footer></footer>
             {% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+       
+        {% endblock %}
+         <script src="{{asset("./script/main.js")}}" ></script>
     </body>
 </html>

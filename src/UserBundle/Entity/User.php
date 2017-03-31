@@ -3,6 +3,7 @@
 namespace UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use JsonSerializable;
 use Serializable;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -14,7 +15,7 @@ use Symfony\Component\Validator\Constraints\File;
  * @ORM\Table(name="lepetitcoin_user")
  * @ORM\Entity(repositoryClass="UserBundle\Repository\UserRepository")
  */
-class User implements UserInterface, Serializable {
+class User implements UserInterface, Serializable , JsonSerializable{
 
     /**
      * @ORM\Column(name="id", type="integer")
@@ -274,6 +275,15 @@ class User implements UserInterface, Serializable {
             $this->prenom,
             $this->nom
         ) = unserialize($serialized);
+    }
+
+    public function jsonSerialize() {
+        return array(
+           "id" => $this->id,
+           "username" => $this->username,
+           "prenom" => $this->prenom,
+           "nom" => $this->nom
+        );
     }
 
 }

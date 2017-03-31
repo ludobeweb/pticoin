@@ -8,11 +8,13 @@
 
 namespace UserBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Swift_Message;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use UserBundle\Entity\User;
 use UserBundle\Form\UserType;
@@ -35,22 +37,6 @@ class UserController extends Controller {
         return $this->render('admin/profil.html.twig', array('monProfil' => $monProfil));
     }
 
-//    /**
-//     * Methode retourne formulaire  maper sur son entity grace a son id 
-//     * 
-//     * @Route("/editprofil/{id}",name ="editprofil" )
-//     * @Template("admin/EditProfil.html.twig")
-//     */
-//    function editProfil($id) {
-//        $em = $this->getDoctrine()->getManager();
-//        $annonce = $em->find('UserBundle:User', $id);
-//        $f = $this->createForm(UserType::class, $annonce);
-//        return array('formtexte' => $f->createView(), "id" => $id);
-//        if ($f->isSubmitted() && $f->isValid()) {
-//            $annonce->flush();
-//            return $this->render('admin/profil.html.twig');
-//        }
-//    }
 
     /**
      *
@@ -70,5 +56,7 @@ class UserController extends Controller {
                     'edit_form' => $editForm->createView(),
         ));
     }
+    
+
 
 }

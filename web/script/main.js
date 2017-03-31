@@ -3,22 +3,34 @@ function myFunction() {
 }
 
 
-$("#userbundle_user_Envoyer").click(function(e){
-    e.preventDefault();
-$("#userbundle_user_prenom");
+
+//Requete ajax pour remplir le formulaire d'édition
+$updateUser = false;
+$("User").change(function (e) {
+    if ($updateUser === false) {
+        $.ajax({
+            type: 'PUT',
+            async: false,
+            dataType: 'json',
+            url: "/editprofil1/{id}",
+            data:
+                    {
+                        "nom": $("#userbundle_user_nom").val(),
+                        "prenom": $("#userbundle_user_prenom").val(),
+                        "username": $("#userbundle_user_username").val()
+
+
+                    },
+            success: function (data ) {
+
+                $("#userbundle_user_nom").val(data.nom);
+                $("#userbundle_user_prenom").val(data.prenom);
+                $("#userbundle_user_username").val(data.username);
+                $updateUser = true;
+
+            }
+        }
+        );
+    }
+    ;
 });
-
-$("#form_submit").click(function(e){
-   if(isset(_POST['form_submit'])){
-       
-   } 
-});
-
-
-
-function seConnecter() {
-    alert("vous êtes bien connecté sur votre espace membre");
-}
-
-
-
